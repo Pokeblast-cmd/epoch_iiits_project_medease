@@ -1,0 +1,660 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #1976d2;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+nav ul li .login-btn {
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    margin-top: 50px;
+    padding: 40px;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.hero-section .cta-btn {
+    background-color: white;
+    color: #1976d2;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.hero-section .cta-btn:hover {
+    background-color: #f4f7fa;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: white;
+}
+
+.features-section h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 0 50px;
+}
+
+.feature-card {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-card img {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #1976d2;
+}
+
+.feature-card p {
+    color: #555;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 100px;
+    background-color: #f4f7fa;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #1976d2;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+footer .social-links li {
+    margin: 0 10px;
+}
+
+footer .social-links li a img {
+    max-width: 24px;
+}
+/* Chatbot Button with Gradient */
+.chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.chatbot-btn:hover {
+    background: linear-gradient(45deg, #e6683c, #dc2743, #cc2366, #bc1888, #9d1dbb);
+}
+
+/* Chatbot Window */
+.chatbot-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Chatbot Header with Gradient */
+.chatbot-header {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Chatbot Logo */
+.chatbot-logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* Close Button */
+.close-chatbot {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Chatbot Body */
+.chatbot-body {
+    padding: 10px;
+    background-color: #f9f9f9;
+    height: 200px;
+    overflow-y: auto;
+    font-size: 14px;
+    color: #333;
+}
+
+.chatbot-body p {
+    margin: 10px 0;
+}
+
+.chatbot-body p:nth-child(odd) {
+    font-weight: bold;
+}
+
+/* Chatbot Input */
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #e6e6e6;
+    background-color: white;
+}
+
+#chatbot-input-field {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    border-radius: 0 0 0 10px;
+    outline: none;
+}
+
+#send-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 0 10px 0;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#send-btn:hover {
+    background-color: #0056b3;
+}
+/* Voice Assistant Button with Blue Gradient */
+.voice-assistant-btn {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff, #4b0082);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.voice-assistant-btn:hover {
+    background: linear-gradient(45deg, #0072ff, #4b0082, #1c1ca1);
+}
+
+/* Voice Assistant Window */
+.voice-assistant-window {
+    position: fixed;
+    bottom: 170px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Voice Assistant Header */
+.voice-assistant-header {
+    background: linear-gradient(45deg, #00c6ff, #0072ff, #4b0082);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Voice Assistant Header Logo */
+.voice-logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* Close Button */
+.close-voice-assistant {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Voice Assistant Body */
+.voice-assistant-body {
+    padding: 10px;
+    background-color: #f9f9f9;
+    height: 200px;
+    overflow-y: auto;
+    font-size: 14px;
+    color: #333;
+}
+
+.voice-assistant-body p {
+    margin: 10px 0;
+}
+
+.voice-assistant-body p:nth-child(odd) {
+    font-weight: bold;
+}
+
+/* Voice Assistant Input */
+.voice-assistant-input {
+    border-top: 1px solid #e6e6e6;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    font-size: 14px;
+}
+/* Doctor Slots Container */
+.doctor-slots-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+/* Doctor List */
+.doctor-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Individual Doctor Card */
+.doctor-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Doctor Card Title */
+.doctor-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Doctor Card Paragraph */
+.doctor-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Available Slots List */
+.doctor-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Call-to-Action Button */
+.cta-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+/* Doctor Slots Container */
+.doctor-slots-container {
+    max-width: 800px; /* Maximum width for the container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+    border: 1px solid #007bff; /* Border around the container */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Doctor List */
+.doctor-list {
+    display: flex; /* Flexbox for aligning cards */
+    flex-direction: column; /* Stack cards vertically */
+}
+
+/* Doctor Card */
+.doctor-card {
+    border: 1px solid #ccc; /* Border for each card */
+    border-radius: 10px; /* Rounded corners for cards */
+    padding: 15px; /* Padding inside cards */
+    margin: 10px 0; /* Margin between cards */
+    background-color: #ffffff; /* White background for cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Call to Action Button */
+.book-btn {
+    display: inline-block; /* Inline block for button */
+    padding: 10px 15px; /* Padding for the button */
+    color: white; /* Text color */
+    background-color: #007bff; /* Button background color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    text-align: center; /* Center text */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.book-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Time Slot List */
+.time-slot-container ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Time Slot List Items */
+.time-slot-container li {
+    padding: 5px; /* Padding for each list item */
+    border-bottom: 1px solid #e0e0e0; /* Bottom border between slots */
+}
+
+.time-slot-container li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e3f2fd; /* Light blue background */
+}
+
+header {
+    background: #007bff; /* Blue background for the header */
+    color: white;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+}
+
+.hero-section p {
+    margin: 20px 0;
+}
+
+.cta-btn {
+    background: #28a745; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.features-section {
+    padding: 50px 20px;
+    background: #f8f9fa;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.appointment-section, .feedback-section, .about-section {
+    padding: 50px 20px;
+}
+
+.doctor-slot {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.doctor {
+    text-align: center;
+}
+
+.book-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.time-slots {
+    margin-top: 20px;
+}
+
+.slots {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.feedback-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-section input, 
+.feedback-section textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback-section button {
+    background: #28a745; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-item {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+footer {
+    background: #007bff; /* Blue footer */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+
